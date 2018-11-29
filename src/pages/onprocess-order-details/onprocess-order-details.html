@@ -1,0 +1,64 @@
+<!--
+  Generated template for the OnprocessOrderDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>onprocess-order-details</ion-title>
+  </ion-navbar>-->
+<ion-row>
+      <ion-col col-12>
+        <ion-avatar class="logo tabs-logo" text-center>
+          <img src="assets/images/logo-small.png" alt="Logo"/>
+        </ion-avatar>
+      </ion-col>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="block">
+  <ion-row>
+    <ion-col col-9 class="hr-margin">
+        <p *ngIf="order_data">{{orders_details.dest}}</p>
+        <hr />
+    </ion-col>
+    <ion-col col-3>
+      <ion-avatar class="loaction" text-center>
+          <img src="assets/images/icon-location-white.png" alt="Location-white"/>
+        </ion-avatar>
+    </ion-col>
+  </ion-row>
+</div>
+
+<!-- Use this button to add markers on map -->
+<!--<ion-buttons end>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+</ion-buttons> -->
+<div #map id="map"></div> 
+
+</ion-content>
+<ion-footer>
+  <div class="white-block-square">
+  <ion-row>
+    <ion-col col-4>
+      <div class="user-block">
+      <ion-avatar class="user-img" text-center>
+          <img *ngIf="order_data" src="{{orders_details.merchant_photo}}" alt="User Image"/>
+      </ion-avatar>
+      <p>Merchant</p>
+      </div>
+    </ion-col>
+    <ion-col col-8>
+      <h3 class="margin-10" *ngIf="order_data">{{orders_details.merchant_name}}</h3>
+      <p *ngIf="order_data">{{orders_details.origin}}</p><br />
+      <h3 *ngIf="order_data">{{orders_details.merchant_phone}}</h3>
+    </ion-col>
+  </ion-row>
+</div>
+</ion-footer>
+

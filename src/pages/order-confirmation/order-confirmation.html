@@ -1,0 +1,92 @@
+<!--
+  Generated template for the OrderConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>order-confirmation</ion-title>
+  </ion-navbar>-->
+<ion-row>
+      <ion-col col-12>
+        <ion-avatar class="logo tabs-logo" text-center>
+          <img src="assets/images/logo-small.png" alt="Logo"/>
+        </ion-avatar>
+      </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+  <div class="white-block-full">
+  <ion-row>
+    <ion-col>
+        <h3 class="padd-10">{{ 't_order_confirm' | translate}}  </h3>
+    </ion-col>
+  </ion-row>
+</div>
+<div *ngFor="let cartItem of cartService.order.order_details; let i = index;" class="block">
+  <ion-row>
+    <ion-col col-8>
+        <p>{{cartItem.name}}</p>
+    </ion-col>
+    <ion-col col-4>
+      <div class="qty-price confirmation" text-center>
+        <p class="price">{{cartItem.price}}</p> 
+        <span class="quantity">
+          <span class="qty" (click)="decrementQty(cartItem,cartItem.product_id)"><ion-icon name="md-remove"></ion-icon></span> 
+          <span class="qty">{{qty['quantity'][cartItem.product_id] || cartItem.qty }}</span> 
+          <span class="qty" (click)="incrementQty(cartItem,cartItem.product_id)"><ion-icon name="md-add"></ion-icon></span>
+       </span>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="white-block-full">
+  <ion-row>
+    <ion-col>
+        <h3 class="padd-10">{{'t_deliver_address' | translate }} </h3>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="block">
+  <ion-row>
+    <ion-col col-9>
+        <p>{{cartService.order.destination}}</p>
+    </ion-col>
+    <ion-col col-3>
+      <ion-avatar class="loaction" text-center>
+          <img src="assets/images/icon-location-white.png" alt="Location-white"/>
+        </ion-avatar>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="white-block-full">
+  <ion-row>
+    <ion-col>
+        <h3 class="padd-10">{{ 't_payment_details' | translate }}</h3>
+    </ion-col>
+  </ion-row>
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <ion-row>
+    <ion-col col-3>
+        <button id="notification-button" ion-button clear> 
+          <ion-icon name="md-cart"> <ion-badge id="notifications-badge">{{cartService.cart_items}}</ion-badge> </ion-icon> 
+        </button> 
+    </ion-col>
+    <ion-col col-6>
+      <p>{{'t_price_est' | translate }}</p>
+      <p class="total-price">Rp {{cartService.grand_total}}</p>
+    </ion-col>
+    <ion-col col-3>
+      <h3 class="order" (click)="order_submit()">{{'t_order' | translate}}</h3>
+    </ion-col>
+  </ion-row>
+  </ion-toolbar>
+</ion-footer>
