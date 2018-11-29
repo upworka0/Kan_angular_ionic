@@ -1,0 +1,152 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>home</ion-title>
+  </ion-navbar>-->
+  <ion-row>
+      <ion-col col-12>
+        <ion-avatar class="logo tabs-logo" text-center>
+          <img src="assets/images/logo-small.png" alt="Logo"/>
+        </ion-avatar>
+      </ion-col>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+<div class="block slide-block">
+<ion-slides *ngIf="isBanner" pager>
+
+    <ion-slide *ngFor="let banner of banners;">
+      <ion-avatar class="tabs-image" text-center>
+        <a target="_blank" href="{{banner.photo}}">
+          <img src="{{banner.photo}}" alt="Logo"/>
+
+        </a>
+        </ion-avatar>
+    </ion-slide>
+    
+
+  </ion-slides>
+
+ <!--  <ion-slides *ngIf="!isBanner" pager>
+
+    <ion-slide>
+      <ion-avatar class="tabs-image" text-center>
+          <img src="assets/images/slide.png" alt="Logo"/>
+        </ion-avatar>
+    </ion-slide>
+    <ion-slide>
+      <ion-avatar class="tabs-image" text-center>
+          <img src="assets/images/slide.png" alt="Logo"/>
+        </ion-avatar>
+    </ion-slide>
+    <ion-slide>
+      <ion-avatar class="tabs-image" text-center>
+          <img src="assets/images/slide.png" alt="Logo"/>
+        </ion-avatar>
+    </ion-slide>
+
+  </ion-slides> -->
+</div>
+		<div *ngFor="let product of retriveProduct; let i = index;" class="block clearfix">
+		  <ion-row>
+			  <ion-col col-4>
+				  <ion-avatar class="product" text-center >
+					<img src="{{product.product_media[0]}}" alt="Logo" style="padding-top:10px"/>
+				  </ion-avatar>
+			  </ion-col>
+			  <ion-col col-8>
+                  <ion-row>
+                      <ion-col col-12>
+				        <div class="product-name text-wrap">{{product.name}} </div>
+                      </ion-col>
+                  </ion-row>
+                  <ion-row>
+                        <ion-col col-12>
+                            <select class="price pull-right" (change)="selectPhLevel($event, product.id)">
+                                <option selected disabled>Choose pH</option>
+                                <option *ngFor="let ph of retrivePh;" >{{ph.name}}</option>
+<!--
+                                <option [ngValue]="1">pH 8.5</option>
+                                <option [ngValue]="2">pH 9</option>
+                                <option [ngValue]="3">pH 9.5</option>
+                                <option [ngValue]="4">pH Lainnya</option>
+-->
+                            </select>
+                        </ion-col>
+                  </ion-row>  
+                  
+                  <ion-row style="margin-top:10px;">
+                      <ion-col col-6>
+                       <span class="price pull-right">{{product.price}}</span>
+                      </ion-col>
+                      <ion-col col-6>
+                        <div class="qty-price">
+                         <!-- <span class="select-item">
+                                <ion-icon name="md-cart" (click)="addProductCart(product,qty['quantity'][product.id])"></ion-icon>
+                            </span> -->
+                            <span class="pull-right quantity">
+                           
+                              <span class="qty" (click)="decrementQty(product,product.id)"><ion-icon name="md-remove"></ion-icon></span> 
+                              <!---<span class="qty"><ion-input type="number" min="1" [value]="1" [(ngModel)]="qty['quantity'][product.id]" autofocus></ion-input></span>-->
+                              <span class="qty">{{qty['quantity'][product.id]||0}}</span> 				  
+                              <span class="qty" (click)="incrementQty(product,product.id)"><ion-icon name="md-add"></ion-icon>
+                              </span>
+                            </span>
+
+                        </div>
+                      </ion-col>
+                  </ion-row>
+                  
+<!--
+                   <ion-row>
+                      <ion-col col-12>
+                        <div class="qty-price">
+                         /* <span class="select-item">
+                                <ion-icon name="md-cart" (click)="addProductCart(product,qty['quantity'][product.id])"></ion-icon>
+                            </span> */
+                        <span class="pull-right quantity">
+                            <span class="price pull-right">{{product.price}}</span>
+                              <span class="qty" (click)="decrementQty(product,product.id)"><ion-icon name="md-remove"></ion-icon></span> 
+                              /* <span class="qty"><ion-input type="number" min="1" [value]="1" [(ngModel)]="qty['quantity'][product.id]" autofocus></ion-input></span> */
+                              <span class="qty">{{qty['quantity'][product.id]||0}}</span> 				  
+                              <span class="qty" (click)="incrementQty(product,product.id)"><ion-icon name="md-add"></ion-icon>
+                              </span>
+                           </span>
+
+                        </div>
+                      </ion-col>
+                  </ion-row>
+-->
+                  
+			  </ion-col>
+		  </ion-row>
+		</div>
+</ion-content>
+<ion-footer>
+<ion-toolbar>
+    <ion-row>
+    <ion-col col-3>
+        <button id="notification-button" ion-button clear> 
+          <ion-icon name="md-cart"> <ion-badge id="notifications-badge">{{cartService.cart_items}}</ion-badge> </ion-icon> 
+        </button> 
+    </ion-col>
+    <ion-col col-8>
+      <p>{{'t_price_est' | translate }}</p>
+      <p class="total-price">Rp {{cartService.grand_total}}</p>
+    </ion-col>
+    <ion-col col-1 tappable (click)="cartPage()">
+      <span class="f-arrow" ><ion-icon name="ios-arrow-forward"></ion-icon></span>
+    </ion-col>
+  </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
