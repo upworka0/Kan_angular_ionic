@@ -1,0 +1,97 @@
+{
+	"//2.0.0":"page",
+
+	"t_full_name":"Full Name",
+	"t_phone":"Phone Number",
+	"t_register":"Register",
+	"t_area_code":"Area Code",
+	"t_login_here":"Please Login Here",
+
+	"//3.0.0":"page",
+	"t_login":"Login",
+	"t_forget_password":"Forget Password?",
+	"t_cust_register_here":"Customer Register Click Here",
+
+	"//3.0.1- forget_pass":"page",
+	"t_send_mail":"Send Email",
+	"t_here_login":"Click Here to Register",
+
+
+	"//3.1.0":"page",
+	"t_price_est":"Price Estimation",
+
+	"//3.2.0-3.3.0":"page",
+	"t_delivery_location":"Choose Delivery Location",
+	"t_payment_details":"Payment Details",
+	"t_enter_address":"Enter Address",
+
+	"//3.3.0":"page",
+	"t_order_confirm":"Order Confirmation",
+	"t_deliver_address":"Delivery Address",
+	"t_order":"ORDER",
+
+	"//3.4.0":"page",
+	"t_looking_merchant":"Looking for Merchant",
+	"t_back":"Back",
+
+	"//3.5.0":"page",
+	"t_no_merchant_show":"No merchant to show",
+	"t_next":"Next",
+
+	"//3.6.0":"page",
+	"t_my_order":"My Order",
+	"t_thanks_note":"Thank You For Using KANGEN 9.5 APP",
+	"t_rate_your_order":"RATE YOUR ORDER",
+	"t_suggesion_note":"Please Give Us Some Suggestions...",
+	"t_send":"SEND",
+
+	"//3.7.1 //3.8.1":"page",
+	"t_on_process":"On Process",
+	"t_pending":"Pending",
+	"t_finished":"Finished",
+
+	"//3.7.2":"page",
+
+	"//3.8.1":"page",
+
+	"//3.8.2":"page",
+	"t_delivery":"Delivery",
+	"t_rate_order":"Rate Order",
+	"t_you_rated":"You rated",
+
+	"t_your_rating":"Your rating",
+
+	"//3.9.0":"page",
+	"t_edit":"Edit",
+	"t_my_account": "My Account",
+	"t_change_password":"Change Password",
+	"t_change_language":"Change Language",
+	"t_logout":"Logout",
+
+	"//3.9.1":"page",
+	"t_save":"SAVE",
+	"t_old_password":"Old Password",
+	"t_new_password":"New Password",
+	"t_password_confirm":"Password Confirm",
+
+	"//4.1.0":"page",
+	"t_accept":"ACCEPT",
+	"t_order_sent":"Order Sent",
+	"t_deposit_to_pay":"Deposit Value You Have To Pay",
+	 
+	"t_monthly" : "Monthly",
+	"t_balance" : "Balance",
+	"t_deposit_value" : "Deposit Value",
+	"t_min_note": "Value must be equal or greater than Minimum amount",
+	"t_min_deposit":"Minimum Deposit",
+	"t_confirm": "Confirm",
+
+	"//4.3.0":"page",
+	"t_finish_alert" : "Do you want to finish this order?",
+	"t_update_order": "Update Order",
+
+	"t_no_new_order" : "No new order"
+	
+
+
+}

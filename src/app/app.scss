@@ -1,0 +1,435 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/*custom style*/
+@font-face{
+    font-family: nimbusbold;
+    src: url(../assets/fonts/NimbusRomNo9L-Med.otf);
+}
+@font-face{
+    font-family: nimbusreg;
+    src: url(../assets/fonts/NimbusRomNo9L-Reg.otf);
+}
+*{
+    margin: 0 auto;
+    font-family: nimbusreg;
+    letter-spacing: 1px;
+}
+.content{
+    background-image: url("../assets/images/bg.jpg");
+}
+ion-header .toolbar-title-md {
+    margin-left: -25px;
+}
+.btn-square-white{
+    background-color: #fff;
+    color: #00a6e0;
+    height: 5rem;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.btn-round-white {
+    background-color: #fff;
+    color: #00a6e0;
+    height: 4.5rem;
+    border-radius: 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.btn-round-white-small {
+    background-color: #fff;
+    color: #00a6e0;
+    height: 4.2rem;
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.button-md:hover:not(.disable-hover) {
+    background-color: #00a6e0 !important;
+    color: #fff !important;
+}
+.main-logo {
+    min-height: 450px;
+}
+.type-buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 85%;
+    bottom: 10px;
+}
+.main-logo img{
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+    width: 75%;
+}
+.toolbar-title{
+    text-align: center;
+    color: #00a6e0;
+}
+.logo img {
+    width: 75%;
+    margin: 30px auto;
+}
+.container {
+    width: 80%;
+}
+.form .item-md {
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: #fff;
+}
+.form input::placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+    border-color: #f53d3d !important;
+    box-shadow: none !important;
+}
+.item-md.item-input.input-has-focus .item-inner {
+  border-color: #488aff !important;
+  box-shadow: none !important;
+}
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-color: #32db64 !important;
+    box-shadow: none !important;
+}
+.list-md .item-block .item-inner {
+    border: 1px solid #fff !important;
+    padding-right: 0 !important;
+    border-radius: 5px !important;
+}
+.md ion-list > .item:last-child, 
+.md ion-list > .item-wrapper:last-child .item,
+.wp ion-list > .item:last-child, 
+.wp ion-list > .item-wrapper:last-child .item,
+.ios ion-list > .item:last-child, 
+.ios ion-list > .item-wrapper:last-child .item {
+    border-bottom: none;
+    box-shadow: none;
+}
+p{
+    font-size: 17px;
+}
+p,.block span{
+    color: #fff;
+}
+.white-block p{
+    color: #00a6e0 !important;
+}
+.toolbar-title{
+    font-family: nimbusbold;
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color:#00a6e0;
+}
+.tabs-logo img{
+    margin: 5px auto;
+}
+.block{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 0 7px 0;
+}
+span.qty {
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px 6px 0px;
+    font-weight: bold;
+}
+.pull-right{
+    float: right;
+}
+ion-slides {
+    padding: 5px;
+}
+.tabs-image img {
+    width: 80%;
+}
+.white-block {
+    background-color: #fff;
+    color: #00a6e0;
+    border-radius: 10px;
+}
+.total-price{
+    font-size: 25px;
+}
+
+ #notification-button {            
+   position: relative;
+   top:1px;
+   right: 8px;
+   overflow: visible!important;
+   font-size: 35px;
+   color: #00a6e0;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   border-right: 3px solid;
+}
+.border-right{
+   border-right: 3px solid #00a6e0;
+}
+#notifications-badge {
+    background-color: #00a6e0;
+    position: absolute;
+    top: 0;
+    right: auto;
+    border-radius: 100%;
+    padding: 5px 5px 0px !important;
+}
+.f-arrow ion-icon {
+    padding: 18px 0 0 0;
+    font-size: 20px;
+}
+.qty-price {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+}
+.qty-price span {
+    font-size: 20px;
+    width: 97px;
+}
+.white-block-full {
+    background-color: #fff;
+    text-align: center;
+    color: #00a6e0;
+    margin-bottom: 7px;
+}
+h3{
+    margin: 0;
+    font-family: nimbusbold;
+}
+.padd-10{
+    padding: 10px 0;
+}
+hr {
+    background-color: #fff !important;
+    height: 2px;
+}
+.hr-margin hr{
+    margin: 10px 0;
+}
+.loaction {
+    position: relative;
+    height: 100%;
+    min-height: 50px;
+}
+.loaction img {
+    width: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    margin: auto;
+}
+#notifications-badge {
+    padding: 3px 6px;
+}
+.confirmation{
+    position: static;
+}
+.confirmation .price{
+    margin-bottom: 10px;
+}
+.order {
+    margin-top: 18px !important;
+    font-size: large;
+}
+.tabs-md .tab-button-icon{
+    color: #AED6F1
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+    color: #04a7e2;
+}
+.search-merchant {
+    height: 100% !important;
+    position: relative;
+}
+.middle-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-table;
+    width: 100%;
+}
+.merchant-logo img {
+    width: 60%;
+    margin-bottom: 100px !important;
+}
+.user-block .user-img img {
+    width: 70%;
+    margin-bottom: 10px;
+}
+.white-block-square {
+    background-color: #fff;
+    color: #00a6e0;
+    padding: 10px 0;
+}
+.user-img img {
+    border-radius: 100%;
+}
+.white-block-square p, .white-block-full p, .footer p, .footer ion-icon, .footer h3,.footer h1, .block button span, .block p.white-block2{
+    color: #00a6e0 !important;
+}
+.user-block {
+    text-align: center;
+    border-right: 3px solid;
+    height: 100%;
+    padding-right: 10px;
+}
+.margin-10 {
+    margin-bottom: 10px;
+}
+.block p, .block h3, .block ion-label{
+    color: #fff !important;
+}
+textarea {
+    background-color: #fff !important;
+    padding: 10px !important;
+    font-size: medium;
+    text-transform: capitalize;
+}
+.comment h3{
+    text-transform: uppercase;
+}
+.block ion-item {
+    background-color: transparent;
+}
+.block .item-inner {
+    border-bottom: none !important;
+}
+ion-segment-button {
+    background-color: #fff !important;
+}
+.block ion-item h3 {
+    color: #fff;
+    font-size: 20px;
+}
+.pull-left{
+    float: left;
+}
+.clearfix{
+    clear: both;
+}
+.white-block hr{
+    background-color: #00a6e0 !important;
+}
+.check img{
+    margin-top: 5px;
+}
+.top-20{
+    margin-top: 15px !important;
+}
+.price{
+    font-size: 20px;
+}
+.finished-order span {
+    font-size: 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.finished-order-cart #notifications-badge {
+    right: auto;
+}
+#map, #map1 {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+.block button {
+    margin-top: 8px;
+}
+.finished-order p, .top-8 {
+    margin-top: 8px !important;
+}
+.order-sent{
+    margin-top: 5px;
+}
+.white-block2 {
+    background-color: #fff;
+    margin-top: 10px;
+    color: #00a6e0 !important;
+    padding: 5px 10px;
+}
+.panel {
+    margin: 0 0 15px 0;
+}
+.block .edit-form .item-inner {
+    border-radius: inherit !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 2px solid !important;
+}
+ion-label[fixed] {
+    -webkit-flex: 0 0 150px;
+    -ms-flex: 0 0 150px;
+    flex: 0 0 150px;
+    width: 150px;
+}
+.item-radio{
+    background-color: #01a3e1 !important;
+}
+.item-radio-checked {
+    border: 2px solid;
+    border-radius: 10px !important;
+}
+form#lang {
+    padding: 0 10px;
+}
+#lang ion-item.item-radio-checked:last-child {
+    border-bottom: 2px solid;
+}
+#lang .radio-icon {
+    display: none !important;
+}
+.lbl {
+    font-size: larger;
+}
+h1{
+    font-weight: bold;
+}
+.product img {
+    min-height: 100px;
+}
+.select-item ion-icon {
+    margin: 0 0 0 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+p.product-name{
+    display:inline-block;
+    width:100%;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}

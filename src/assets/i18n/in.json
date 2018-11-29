@@ -1,0 +1,96 @@
+{
+	"//2.0.0":"page",
+
+	"t_full_name":"Nama Lengkap",
+	"t_phone":"Telepon",
+	"t_register":"Daftar",
+	"t_area_code":"Kode Area",
+	"t_login_here":"Silahkan Masuk Disini",
+
+	"//3.0.0":"page",
+	"t_login":"Masuk",
+	"t_forget_password":"Lupa Password?",
+	"t_cust_register_here":"Belum Daftar ? klik disini",
+
+	"//3.0.1- forget_pass":"page",
+	"t_send_mail":"Kirim Email",
+	"t_here_login":"Belum Daftar? Klik Disini",
+
+
+	"//3.1.0":"page",
+	"t_price_est":"Perkiraan Harga",
+
+	"//3.2.0-3.3.0":"page",
+	"t_delivery_location":"Pilih Lokasi",
+	"t_payment_details":"Detail Pembayaran",
+	"t_enter_address":"Masukkan alamat",
+
+	"//3.3.0":"page",
+	"t_order_confirm":"Konfirmasi Pesan",
+	"t_deliver_address":"Alamat Pengiriman",
+	"t_order":"PESAN",
+
+	"//3.4.0":"page",
+	"t_looking_merchant":"Mencari Pedagang",
+	"t_back":"Belakang",
+
+	"//3.5.0":"page",
+	"t_no_merchant_show":"Tidak ada pedagang yang bisa ditunjukkan",
+	"t_next":"Sebelah",
+
+	"//3.6.0":"page",
+	"t_my_order":"Pesnan Saya",
+	"t_thanks_note":"Terima Kasih Menggunakan KANGEN 9.5 APP",
+	"t_rate_your_order":"BERI NILAI PESAN ANDA",
+	"t_suggesion_note":"Saran dan Kritik...",
+	"t_send":"KIRIM",
+
+	"//3.7.1 //3.8.1":"page",
+	"t_on_process":"Dalam Proses",
+	"t_pending":"Tertunda",
+	"t_finished":"Selesai",
+
+	"//3.7.2":"page",
+
+	"//3.8.1":"page",
+
+	"//3.8.2":"page",
+	"t_delivery":"Pengiriman",
+	"t_rate_order":"Menilai Pesan",
+	"t_you_rated":"Anda menilai",
+
+	"t_your_rating":"Menilai",
+
+	"//3.9.0":"page",
+	"t_edit":"UBAH",
+	"t_my_account": "Akun Saya",
+	"t_change_password":"Ubah Password",
+	"t_change_language":"Ubah Bahasa",
+	"t_logout":"Keluar",
+
+	"//3.9.1":"page",
+	"t_save":"SIMPAN",
+	"t_old_password":"Password Lama",
+	"t_new_password":"Password Baru",
+	"t_password_confirm":"Konfirmasi Password",
+
+	"//4.1.0":"page",
+	"t_accept":"TERIMA",
+	"t_order_sent":"Sudah Dikirim",
+	"t_deposit_to_pay":"Nilai Deposit yang harus dibayar adalah",
+	
+	"t_monthly" : "Bulanan",
+	"t_balance" : "Saldo",
+	"t_deposit_value" : "Nilai deposit",
+	"t_min_note": "Nilai harus sama atau lebih besar dari jumlah minimum",
+	"t_min_deposit":"Deposit minimal",
+	"t_confirm": "Konfirmasi",
+
+	"//4.3.0":"page",
+	"t_finish_alert" : "Apakah Anda ingin menyelesaikan pesan ini?",
+	"t_update_order": "Memperbarui Pesan",
+
+	"t_no_new_order" : "Tidak ada pesan baru"
+
+
+}
