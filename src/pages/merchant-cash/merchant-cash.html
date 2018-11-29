@@ -1,0 +1,127 @@
+<!--
+  Generated template for the MerchantOrderListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>merchant-order-list</ion-title>
+</ion-navbar>-->
+<ion-row>
+	<ion-col col-12>
+		<ion-avatar class="logo tabs-logo" text-center>
+			<img src="assets/images/logo-small.png" alt="Logo"/>
+		</ion-avatar>
+	</ion-col>
+</ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-segment [(ngModel)]="selectedSegment" color="primary" (ionChange)="onSegmentChanged($event)">
+		<ion-segment-button value="monthly">
+			{{'t_monthly' | translate }}
+		</ion-segment-button>
+		<ion-segment-button value="balance">
+			{{'t_balance' | translate }}
+		</ion-segment-button>
+	</ion-segment>
+	<br />
+	<div [ngSwitch]="selectedSegment">
+
+		<div *ngSwitchCase="'monthly'">
+
+			
+			<div class="white-block-full">
+				<ion-row>
+					<ion-col>
+						<h3 class="top-20">{{'t_deposit_to_pay' | translate }}</h3><br />
+						<h1>Rp {{deposit_submit_monthly  }}</h1><br />
+
+						<p text-left> - Payment Via ATM / Internet Banking / Bank Transfer</p>
+						<div *ngIf="is_data">
+							<span  *ngFor="let bank of deposit_banks;">
+								<p  text-left> - {{bank.bank_account}} Bank Account No.{{bank.number_account}} an {{bank.user_account}} </p>
+							</span>
+						</div>
+						<br />
+						<br />
+					</ion-col>
+				</ion-row>
+			</div>
+
+			<div class="white-block-full">
+				<ion-row>
+					<ion-col>
+						<h3 (click)="deposit_amount_serv_monthly()" class="padd-10">{{'t_confirm' | translate }}</h3>
+					</ion-col>
+				</ion-row>
+			</div>
+
+			
+		</div>
+		
+		<div *ngSwitchCase="'balance'">
+			
+
+			<div class="block">
+				<ion-row>
+					<ion-col>
+						<form id="deposit-balance" class="form">
+							<ion-list>
+								<ion-row>
+									<ion-col col-4>
+										<ion-label class="lbl">{{'t_deposit_value' | translate}}</ion-label>
+									</ion-col>
+									<ion-col col-8>
+										<ion-item>
+											<ion-input type="number" id="deposit-value" [(ngModel)]="deposit_amount" [ngModelOptions]="{standalone: true}" autofocus></ion-input>
+										</ion-item>
+									</ion-col>
+								</ion-row>
+							</ion-list>
+							<ion-row>
+								<ion-col col-7>
+									<p *ngIf = "is_data && deposit_error"> {{'t_min_note' | translate}} </p>
+
+									<h3 *ngIf="is_data">*  {{'t_min_deposit' | translate }} {{deposit_settings.min_deposit}}</h3>
+								</ion-col>
+								<ion-col col-5 text-right>
+									<button ion-button class="btn-round-white" (click)="deposit()" type="button">Deposit</button>
+								</ion-col>
+							</ion-row>
+						</form>
+					</ion-col>
+				</ion-row>
+			</div>
+			<div class="white-block-full">
+				<ion-row>
+					<ion-col>
+						<h3 class="top-20">{{'t_deposit_to_pay' | translate}} </h3><br />
+						<h1>Rp {{deposit_submit  }}</h1><br />
+
+						<p text-left> - Payment Via ATM / Internet Banking / Bank Transfer</p>
+						<div *ngIf="is_data">
+							<span  *ngFor="let bank of deposit_banks;">
+								<p  text-left> - {{bank.bank_account}} Bank Account No.{{bank.number_account}} an {{bank.user_account}} </p>
+							</span>
+						</div>
+						<br />
+						<br />
+					</ion-col>
+				</ion-row>
+			</div>
+
+			<div class="white-block-full">
+				<ion-row>
+					<ion-col>
+						<h3 (click)="deposit_amount_serv()" class="padd-10">{{'t_confirm' | translate }}</h3>
+					</ion-col>
+				</ion-row>
+			</div>
+		</div>
+	</div>
+</ion-content>

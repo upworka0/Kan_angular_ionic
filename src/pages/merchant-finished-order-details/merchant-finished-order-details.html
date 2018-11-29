@@ -1,0 +1,122 @@
+<!--
+  Generated template for the MerchantFinishedOrderDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!--<ion-navbar>
+    <ion-title>merchant-finished-order-details</ion-title>
+  </ion-navbar>-->
+  <ion-row>
+    <ion-col col-12>
+      <ion-avatar class="logo tabs-logo" text-center>
+        <img src="assets/images/logo-small.png" alt="Logo"/>
+      </ion-avatar>
+    </ion-col>
+  </ion-row>
+
+</ion-header> 
+
+<ion-content padding >
+    <div #map id="map"></div>
+  <div class="white-block-full">
+    <ion-row>
+      <ion-col>
+        <p class="padd-10" *ngIf="order_data" ><span text-left>Order# {{orders_details.order_id}}</span><span text-right>{{orders_details.order_time}}</span></p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf="order_data">
+    <div class="block finished-order" *ngFor="let order of orders_details.order_detail">
+     <ion-row>
+      <ion-col col-7>
+        <p>{{order.product}}</p>
+      </ion-col>
+      <ion-col col-2>
+        <span class="qty">{{order.qty}}</span>
+      </ion-col>
+      <ion-col col-3>
+        <span class="price">{{order.price}}</span> 
+      </ion-col>
+    </ion-row>
+  </div>
+</div>
+
+
+<div class="white-block-full">
+  <ion-row>
+    <ion-col>
+      <h3 class="padd-10">{{'t_delivery' | translate }} </h3>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="block">
+ <ion-row>
+  <ion-col col-3>
+    <ion-avatar class="user-img" text-center>
+      <img alt="User Image" *ngIf="order_data" src="{{orders_details.merchant_photo}}">
+    </ion-avatar>
+    <ion-avatar text-center>
+      <img alt="Line" src="assets/images/dash.png" height="120">
+    </ion-avatar>
+    <ion-avatar class="loaction-with-line" text-center="">
+      <img alt="Location-white" src="assets/images/icon-location-white.png" width="50">
+    </ion-avatar>
+  </ion-col>
+  <ion-col col-9>
+  <h3 class="margin-10" *ngIf="order_data">{{orders_details.merchant_name}}</h3>
+    <p *ngIf="order_data">{{orders_details.origin}}</p>
+    <hr />
+    <h3 class="margin-10" *ngIf="order_data">{{orders_details.user_name}}</h3>
+    <p *ngIf="order_data">{{orders_details.dest}}</p>
+    <p *ngIf="order_data">{{orders_details.user_phone}}</p>
+  </ion-col>
+</ion-row>
+</div>
+
+<div  *ngIf="order_data && orders_details.rate " class="white-block-full">
+  <ion-row >
+    <ion-col>
+      <h3 class="padd-10">
+        {{'t_your_rating' | translate}}: 
+        <rating  [(ngModel)]="orders_details.rate" 
+        readOnly="true" 
+        max="5"
+        emptyStarIconName="star-outline" 
+        halfStarIconName="star-half" 
+        starIconName="star" 
+        nullable="false" 
+        ></rating>
+      </h3>
+    </ion-col>
+  </ion-row>
+  
+</div>
+<div *ngIf="order_data && orders_details.notes "   class="block " >
+ <ion-row>
+  <ion-col col-12>
+    <p>{{orders_details.notes}}</p>
+  </ion-col>      
+</ion-row>
+</div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col col-6 class="finished-order-cart border-right" text-center>
+        <div *ngIf="order_data">
+        <!-- <h3 *ngIf="orders_details.status=='finish'" class="order-sent">Order Sent</h3> -->
+        <h3 *ngIf="orders_details.status=='on_process'" (click)="updateOrder()" class="order-sent">{{'t_order_sent' | translate }} </h3>
+
+        </div>
+      </ion-col>
+      <ion-col col-6 text-center>
+        <p class="total-price" *ngIf="order_data">Rp {{orders_details.price}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
